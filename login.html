@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>PROFLIX — Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+  <main class="auth-shell">
+    <section class="auth-brand">
+      <div class="logo">PROFLIX</div>
+      <h1>Watch anywhere.</h1>
+      <p>Sign in to continue to your movie and series library.</p>
+    </section>
+
+    <section class="auth-card">
+      <h2>Welcome back</h2>
+      <p class="muted">Use your real Firebase account to sign in.</p>
+
+      <form id="loginForm" class="form">
+        <label>Email
+          <input id="email" type="email" autocomplete="email" required placeholder="you@example.com">
+        </label>
+
+        <label>Password
+          <input id="password" type="password" autocomplete="current-password" required placeholder="••••••••">
+        </label>
+
+        <button class="btn primary full" type="submit">Sign in</button>
+        <button class="btn ghost full" type="button" id="resetBtn">Forgot password?</button>
+        <p id="authMessage" class="message"></p>
+      </form>
+
+      <div class="auth-divider"><span>New to PROFLIX?</span></div>
+
+      <form id="signupForm" class="form compact">
+        <label>Display name
+          <input id="signupName" type="text" required placeholder="Your name">
+        </label>
+        <label>Email
+          <input id="signupEmail" type="email" required placeholder="you@example.com">
+        </label>
+        <label>Password
+          <input id="signupPassword" type="password" minlength="6" required placeholder="At least 6 characters">
+        </label>
+        <button class="btn secondary full" type="submit">Create account</button>
+      </form>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

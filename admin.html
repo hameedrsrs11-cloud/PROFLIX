@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>PROFLIX — Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="admin-page">
+  <header class="topbar standalone">
+    <a class="brand mobile-brand" href="index.html">PROFLIX ADMIN</a>
+    <div class="top-actions">
+      <a class="btn ghost" href="index.html">Home</a>
+      <button class="btn danger" id="logoutBtn">Logout</button>
+    </div>
+  </header>
+
+  <main class="admin-wrap">
+    <div class="admin-title">
+      <div><span class="tag">ADMIN</span><h1>Upload & manage content</h1><p class="muted">Only Firebase users listed in the admins collection can use this page.</p></div>
+    </div>
+
+    <section class="panel">
+      <h2>Add Movie / Series</h2>
+      <form id="uploadForm" class="admin-form">
+        <label>Title<input id="title" required placeholder="Movie title"></label>
+        <label>Type
+          <select id="type"><option value="movie">Movie</option><option value="kdrama">K-Drama</option><option value="series">Series</option></select>
+        </label>
+        <label>Genre<input id="genre" required placeholder="Action, Romance"></label>
+        <label>Year<input id="year" type="number" min="1900" max="2100" required placeholder="2026"></label>
+        <label>Description<textarea id="description" rows="4" placeholder="Short description"></textarea></label>
+        <label>Poster image <input id="poster" type="file" accept="image/*" required></label>
+        <label>Video file <input id="video" type="file" accept="video/*" required></label>
+        <button class="btn primary" type="submit">Upload to Firebase</button>
+        <div class="progress"><span id="uploadProgress"></span></div>
+        <p id="adminMessage" class="message"></p>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="section-head"><h2>Library</h2><button class="btn ghost small" id="refreshMovies">Refresh</button></div>
+      <div id="adminList" class="admin-list"></div>
+    </section>
+  </main>
+</div>
+<script type="module" src="app.js"></script>
+</body>
+</html>

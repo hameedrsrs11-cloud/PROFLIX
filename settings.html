@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>PROFLIX — Settings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="simple-page">
+  <header class="topbar standalone">
+    <a class="brand mobile-brand" href="index.html">PROFLIX</a>
+    <div class="top-actions">
+      <a class="btn ghost" href="index.html">Home</a>
+      <a class="btn ghost" href="profile.html">Profile</a>
+      <button class="btn danger" id="logoutBtn">Logout</button>
+    </div>
+  </header>
+  <main class="settings-wrap">
+    <h1>Settings</h1>
+    <div class="settings-grid">
+      <section class="panel">
+        <h2>Appearance</h2>
+        <label class="switch-row"><span>Dark theme</span><input id="themeToggle" type="checkbox" checked></label>
+        <label class="switch-row"><span>Compact cards</span><input id="compactToggle" type="checkbox"></label>
+      </section>
+      <section class="panel">
+        <h2>Playback</h2>
+        <label class="switch-row"><span>Autoplay</span><input id="autoplayToggle" type="checkbox"></label>
+        <label class="switch-row"><span>Remember last position</span><input id="rememberToggle" type="checkbox" checked></label>
+      </section>
+      <section class="panel">
+        <h2>Notifications</h2>
+        <label class="switch-row"><span>New releases</span><input id="releaseToggle" type="checkbox" checked></label>
+        <label class="switch-row"><span>Account alerts</span><input id="alertToggle" type="checkbox" checked></label>
+      </section>
+      <section class="panel">
+        <h2>Security</h2>
+        <button class="btn ghost" id="resetPasswordBtn">Send password reset email</button>
+        <p id="settingsMessage" class="message"></p>
+      </section>
+    </div>
+  </main>
+</div>
+<script type="module" src="app.js"></script>
+</body>
+</html>

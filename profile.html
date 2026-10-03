@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>PROFLIX — Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="simple-page">
+  <header class="topbar standalone">
+    <a class="brand mobile-brand" href="index.html">PROFLIX</a>
+    <div class="top-actions">
+      <a class="btn ghost" href="index.html">Home</a>
+      <button class="btn danger" id="logoutBtn">Logout</button>
+    </div>
+  </header>
+  <main class="settings-wrap">
+    <div class="profile-head">
+      <div class="big-avatar" id="profileAvatar">U</div>
+      <div><h1 id="profileName">User</h1><p class="muted" id="profileEmail">—</p></div>
+    </div>
+    <div class="settings-grid">
+      <section class="panel">
+        <h2>Profile</h2>
+        <form id="profileForm" class="form">
+          <label>Display name<input id="profileNameInput" required></label>
+          <label>Photo URL<input id="photoURL" placeholder="https://..."></label>
+          <button class="btn primary" type="submit">Save profile</button>
+          <p id="profileMessage" class="message"></p>
+        </form>
+      </section>
+      <section class="panel">
+        <h2>Account</h2>
+        <p class="muted">Email/password authentication is handled by Firebase Authentication.</p>
+        <a class="btn ghost" href="settings.html">Open Settings</a>
+      </section>
+    </div>
+  </main>
+</div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
